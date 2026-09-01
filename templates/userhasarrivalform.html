@@ -1,0 +1,6 @@
+{% extends 'base.html' %}{% block content %}<form  enctype="multipart/form-data" method="POST">
+<div class="field"><label for="somefieldcity_id">city_id</label><select id="somefieldcity_id" name="city_id"><option value="novalue">no value</option>
+{% for somecity in touslescity %}
+<option value="{{ somecity['id'] }}">{{ somecity['name'] }}</option>{% endfor %}
+</select></div>
+<div class="field"><label for="somefielduserhasarrivaluser_id">user_id</label><input type="text" id="somefielduserhasarrivaluser_id" name="user_id"/></div><div class="actions"><input type="submit"/></div></form>{% for x in userhasarrivals %}{{x["city_id"] }}{% endfor %}{% endblock %}{% block liens %}<a href="/">bienvenue</a><a href="/add_one_userhasarrival"> add one userhasarrival</a>{% endblock %}

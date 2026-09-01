@@ -1,5 +1,22 @@
+{% extends 'base.html' %}
+
+{% block montitre %}
+debut de mes mots: bienvenue
+{% endblock %}
+{% block content %}
 <h1># out-of-home</h1>
-<p>
-fake id : fake name, fake address, fake job
-</p>
-<img alt="my ad" src="" />
+{% for x in users | reverse %}
+ <li>{{ x["first_name"]  }}</li>
+
+{% endfor %} 
+fin de mes mots : this is my little home away from home message de user (anonyme) dans al vilel de .. (avec une image de ville de nuit).
+Découvre dnas les messages de héros ce qua fait lnaonyme user.
+You know youre my home away from home
+Picture [you and I] (or other things/people) way down the road
+Got [you]  on my mind from dusk til the dawn , or 
+
+[Verse 1]  DI didnt sleep at all last night,G            D/F#    EmI stayed up til the dawn,A7                                  E7           A7Banging out the jigs and reels til everyone had gone,D                                  G      D/F#     EmSinging some old shut-eyed songs I hadnt sung for years,A                 A7             D Run away from home, why dont you? Cause I did the same just for you. You dont know how much I loved you Cause youre my home away from home
+{% endblock %}
+{% block liens %}
+<a href="/">welcome</a>
+{% endblock %}
